@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ticketmaster-test/static/css/main.b5599459.css",
+    "main.js": "/ticketmaster-test/static/js/main.0b7a81ce.js",
+    "static/media/404.svg": "/ticketmaster-test/static/media/404.5d42d828f49314a66d735ce75af1aba6.svg",
+    "static/media/ticketmaster-white.png": "/ticketmaster-test/static/media/ticketmaster-white.1cbb667b92e65b43cf39.png",
+    "static/media/search.svg": "/ticketmaster-test/static/media/search.8d188043880a4450ed878f6803286fdd.svg",
+    "static/media/loader.svg": "/ticketmaster-test/static/media/loader.97a26601e421550de39665e2b9341040.svg",
+    "index.html": "/ticketmaster-test/index.html",
+    "main.b5599459.css.map": "/ticketmaster-test/static/css/main.b5599459.css.map",
+    "main.0b7a81ce.js.map": "/ticketmaster-test/static/js/main.0b7a81ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5599459.css",
+    "static/js/main.0b7a81ce.js"
+  ]
+}
