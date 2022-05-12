@@ -1,0 +1,19 @@
+.error-container {
+    display: flex;
+    justify-content: center;
+    padding: 28px 0;
+}
+@media only screen and (max-width: 1620px) {
+    .error-container img {
+        height: 355px;
+    }
+} 
+
+@media only screen and (max-width: 1008px) {
+    .error-container {
+        padding-bottom: 150px;
+    }
+    .error-container img {
+        height: 155px;
+    }
+  }

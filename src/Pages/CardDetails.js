@@ -1,11 +1,15 @@
 import React from 'react';
+import { useParams } from 'react-router-dom'
 import '../Styles/CardDetails.css'
 
+function CardDetails({ ticketData }) {
 
-function CardDetails({ ticketData, cardValue }) {
+    const { id } = useParams()
 
-    const { id, author, width, height, download_url } = ticketData[cardValue];
-
+    console.log(id)
+    // ovde je id mnogo veliki i zato mi ne daje ono sto mi treba iz array-a, trebalo bi da ide 0, 1, 2, 3, 4, ...
+    // probaj da gadjas njihov index 
+    const { author, width, height, download_url, url } = ticketData[id];
 
     return (
         <div className="card-details-container">
@@ -18,12 +22,10 @@ function CardDetails({ ticketData, cardValue }) {
                 <p>Height: {height}px</p>
             </div>
             <div className="foot">
-                <a href={download_url} target='_blank' rel="noopener noreferrer">
-                    <button>download img</button>
+                <a href={url} target='_blank' rel="noopener noreferrer">
+                    <button>More info</button>
                 </a>
             </div>
-
-
         </div>
     )
 }

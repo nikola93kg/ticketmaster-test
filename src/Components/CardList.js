@@ -8,17 +8,15 @@ function CardList({ filteredTicketData }) {
 
     const listViewUrl = window.location.pathname;
 
-    if (filteredTicketData >= filteredTicketData.length) {
+    if (filteredTicketData.length < 1) {
         return <TrySomethingElse />
     }
-    if (filteredTicketData === undefined) return;
-
 
     return (
         <div className="list-container">
             {filteredTicketData.map((data) => {
                 return (
-                    <Card {...data} listViewUrl={listViewUrl} />
+                    <Card {...data} listViewUrl={listViewUrl} key={data.id} />
                 )
             })}
         </div>

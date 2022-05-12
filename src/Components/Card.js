@@ -5,14 +5,14 @@ import { GoBriefcase, GoBrowser } from "react-icons/go";
 import { FaChevronRight } from "react-icons/fa";
 
 
-function Card({ id, author, width, height, url, download_url, listViewUrl }) {
+function Card({ id, author, width, height, download_url, listViewUrl }) {
 
 
     if (listViewUrl === '/list-view') {
         return (
             <div className="list-item">
                 <div className='item'>
-                    <img src={download_url} style={{ backgroundImage: 'linear-gradient(180deg, #0001, #0009)' }} alt="nesto" />
+                    <img src={download_url} style={{ backgroundImage: 'linear-gradient(180deg, #0001, #0009)' }} alt="ticket picture" />
                     <div className="date-info">
                         <p>JAN</p>
                         <p>16</p>
@@ -25,7 +25,7 @@ function Card({ id, author, width, height, url, download_url, listViewUrl }) {
                     </div>
                 </div>
                 <div className="button-container">
-                    <Link to='/card-details' target='_blank' rel="noopener noreferrer">
+                    <Link to={`/card-details/${id}`} target='_blank' rel="noopener noreferrer">
                         <button>Buy tickets <FaChevronRight /> </button>
                     </Link>
                 </div>
@@ -34,17 +34,19 @@ function Card({ id, author, width, height, url, download_url, listViewUrl }) {
     }
 
     return (
-        <div className="grid-item">
-            <div className='item'>
-                <img src={download_url} style={{ backgroundImage: 'linear-gradient(180deg, #0001, #0009)' }} alt="nesto" />
-                <h3>{author}</h3>
-                <div className="item-info">
-                    <p> <span> <GoBriefcase /> </span> Height: {height + 'px'}</p>
-                    <p> <span> <GoBrowser /> </span>Width:  {width + 'px'}</p>
-                </div>
+        <Link to={`/card-details/${id}`} target='_blank' rel="noopener noreferrer" >
+            <div className="grid-item">
+                <div className='item'>
+                    <img src={download_url} style={{ backgroundImage: 'linear-gradient(180deg, #0001, #0009)' }} alt="ticket picture" />
+                    <h3>{author}</h3>
+                    <div className="item-info">
+                        <p> <span> <GoBriefcase /> </span> Height: {height + 'px'}</p>
+                        <p> <span> <GoBrowser /> </span>Width:  {width + 'px'}</p>
+                    </div>
 
+                </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

@@ -18,7 +18,6 @@ function App() {
 
   const [ticketData, setTicketData] = useState([]);
   const [searchField, setSearchField] = useState('');
-  const [value, setValue] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
@@ -41,6 +40,10 @@ function App() {
     return data.author.toLowerCase().includes(searchField.toLowerCase());
   })
 
+  const cardIndex = filteredTicketData.map((item, index) => {
+      return index;
+    })
+  
 
   if (isLoading) {
     return <Loading />
@@ -52,9 +55,9 @@ function App() {
       <SearchBox onSearchChange={onSearchChange} />
       <ViewIcons ticketData={filteredTicketData} />
       <Routes>
-        <Route path='/' element={<CardGrid filteredTicketData={filteredTicketData} setValue={setValue} />} />
+        <Route path='/' element={<CardGrid filteredTicketData={filteredTicketData} />} />
         <Route path='/list-view' element={<CardList filteredTicketData={filteredTicketData} />} />
-        <Route path='/card-details' element={<CardDetails ticketData={filteredTicketData} cardValue={value} />} />
+        <Route path='/card-details/:id' element={<CardDetails ticketData={filteredTicketData}  />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />

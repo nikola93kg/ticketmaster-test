@@ -21,3 +21,9 @@ a:hover {
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 1008px) {
+  .grid-container {
+    justify-content: center;
+  }
+}

@@ -124,3 +124,23 @@
 .button-container button svg {
   padding: 0 15px;
 }
+
+@media only screen and (max-width: 1008px) {
+  .list-item {
+    flex-direction: column;
+  }
+  .date-info {
+    margin: 10px 0;
+  }
+  .list-item .item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .item-info {
+    align-items: center;
+  }
+  .button-container {
+    margin: 10px 0;
+  }
+}

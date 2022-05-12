@@ -1,26 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Card from './Card';
 import '../Styles/CardGrid.css';
 import TrySomethingElse from './TrySomethingElse';
 
 
-function CardGrid({ filteredTicketData, setValue }) {
+function CardGrid({ filteredTicketData }) {
 
-    if (filteredTicketData >= filteredTicketData.length) {
+    if (filteredTicketData.length < 1) {
         return <TrySomethingElse />
     }
-    if (filteredTicketData === undefined) return;
 
     return (
         <div className="grid-container">
-            {filteredTicketData.map((data, index) => {
-                console.log(index);
-                return (
-                    <Link to='/card-details' target='_blank' rel="noopener noreferrer" key={data.id} onClick={() => setValue(index)}>
-                        <Card  {...data} />
-                    </Link>
-                )
+            {filteredTicketData.map((data) => {
+                return <Card  {...data} key={data.id} />
             })}
         </div>
     )

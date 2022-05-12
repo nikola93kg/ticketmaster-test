@@ -39,3 +39,32 @@
 .foot button:hover {
   color: #fff9;
 }
+
+/* laptop screen */
+@media only screen and (max-width: 1620px) {
+  .card-details-container {
+    height: auto;
+    width: 400px;
+    padding-bottom: 40px;
+  }
+  .body img {
+    width: 400px;
+    height: 300px;
+  }
+} 
+
+/* mobile screen */
+@media only screen and (max-width: 1008px) {
+  .card-details-container {
+    height: auto;
+    width: 300px;
+    padding-bottom: 40px;
+  }
+  .card-details-container h1 {
+    font-size: 1.5em;
+  }
+  .body img {
+    width: 300px;
+    height: 200px;
+  }
+}
