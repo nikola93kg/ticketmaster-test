@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #262626;
+  color: #fff9;
+  font-family: "Poppins";
+  font-size: 0.8em;
+  font-weight: 600;
+  border-bottom: 3px solid #0002;
+}
+.logo p {
+  margin: 0;
+  padding-top: 5px;
+  position: relative;
+  left: 10px;
+}
+.logo img {
+  height: 60px;
+  object-fit: contain;
+  padding-right: 20px;
+}

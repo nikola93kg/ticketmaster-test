@@ -1,0 +1,9 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  width: 80%;
+  margin: auto;
+}
+
+/* napravi responsive ovde za laptop ekran */

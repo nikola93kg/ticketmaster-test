@@ -1,0 +1,26 @@
+.grid-list-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 2em;
+  height: 50px;
+  padding: 20px;
+  color: #0009;
+}
+.grid-list-icons button {
+  all: unset;
+}
+.grid-list-icons svg {
+  transition: 0.4s color;
+  cursor: pointer;
+}
+.grid-list-icons svg:hover {
+  color: #0984e3;
+}
+.active svg {
+  color: #0984e3;
+}
+.divider {
+  height: 50px;
+}
