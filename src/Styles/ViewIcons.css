@@ -20,6 +20,8 @@
 }
 .active svg {
   color: #0984e3;
+  width: 35px;
+  height: 35px;
 }
 .divider {
   height: 50px;
